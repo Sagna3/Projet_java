@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculatrice</title>
+</head>
+<body>
+    
+     <form>
+        <label for="num1">Champ 1:</label>
+        <input type="text" id="num1" name="num1"><br><br>
+        <label for="num2">Champ 2:</label>
+        <input type="text" id="num2" name="num2" ><br><br>
+        <button onclick="calculer()">Caculer</button>
+     </form>
+     <SCript>
+      function calculer() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        if (isNaN(num1) || isNaN(num2)) {
+				alert("Veuillez saisir des nombres .");
+				return;
+			}
+			if (num2 == 0) {
+				alert("La division par zéro est impossible.");
+				return;
+			}
+      
+        var somme = num1 + num2;
+        var multiplication = num1 * num2;
+        var division = num1 / num2;
+        var soustraction = num1 - num2;
+      
+        document.write("<p>La somme de " + num1 + " et " + num2 + " est " + somme + ".</p>");
+        document.write("<p>Le produit de " + num1 + " et " + num2 + " est " + multiplication + ".</p>");
+        document.write("<p>Le resultat de la division de " + num1 + "par " + num2 + " est " + division + ".</p>");
+        document.write("<p>La différence entre " + num1 + " et " + num2 + " est " + soustraction + ".</p>");
+      }
+    </SCript>
+</body>
+</html>
